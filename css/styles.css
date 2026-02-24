@@ -443,9 +443,11 @@ input:focus, select:focus, textarea:focus{
   border: 1px solid rgba(255,255,255,.18);
   box-shadow: var(--shadow);
 }
+/* Prevent sticky CTA from overlapping content (iPhone safe-area friendly) */
 @media (max-width: 860px){
-  .sticky-cta{ display:flex; }
-  body{ padding-bottom: 72px; }
+  main{
+    padding-bottom: calc(110px + env(safe-area-inset-bottom));
+  }
 }
 @media (max-width: 860px){
   .section-head{
