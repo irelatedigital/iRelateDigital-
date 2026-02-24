@@ -1,1 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Book a Strategy Call — iRelateDigital</title>
+  <meta name="description" content="Book a 20-minute growth strategy call to build your Predictable Call System™." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="iRelateDigital Home">
+        <span class="brand-mark" aria-hidden="true">iR</span>
+        <span class="brand-name">iRelateDigital</span>
+      </a>
+
+      <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="nav-toggle-lines" aria-hidden="true"></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="industries.html">Industries</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a class="active btn btn-primary" href="strategy-call.html">Book Strategy Call</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container narrow">
+        <p class="pill">Strategy Call</p>
+        <h1>Let’s build your Predictable Call System™</h1>
+        <p class="lead">
+          In this 20-minute strategy session, we’ll review your current call flow, service area opportunity, and a clear plan to grow.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid form-grid">
+        <div class="card">
+          <h2 class="h4">What we’ll cover</h2>
+          <ul class="bullet">
+            <li>Current monthly call volume & goals</li>
+            <li>Service area targeting and exclusions</li>
+            <li>Priority job types (higher-profit services)</li>
+            <li>Call tracking + reporting expectations</li>
+            <li>Fit evaluation and next steps</li>
+          </ul>
+
+          <div class="divider"></div>
+
+          <h3 class="h5">Qualification note</h3>
+          <p class="muted">
+            We partner with a limited number of businesses per primary service zone to avoid conflict.
+          </p>
+        </div>
+
+        <div class="card glass">
+          <h2 class="h4">Request your call</h2>
+          <p class="muted">Fill this out and we’ll follow up to schedule.</p>
+
+          <!-- Replace action="#" with your form handler:
+               - Formspree
+               - Google Forms endpoint
+               - CRM embed
+               - Calendly embed (recommended)
+          -->
+          <form class="form" action="#" method="post" onsubmit="return window.iRD.handleFormSubmit(event);">
+            <label>
+              Full name
+              <input required name="name" type="text" placeholder="Your name" />
+            </label>
+            <label>
+              Business name
+              <input required name="business" type="text" placeholder="Company name" />
+            </label>
+            <label>
+              Phone
+              <input required name="phone" type="tel" placeholder="(808) 555-0123" />
+            </label>
+            <label>
+              Email
+              <input required name="email" type="email" placeholder="you@company.com" />
+            </label>
+            <label>
+              Primary service area
+              <input required name="area" type="text" placeholder="Honolulu / Oahu / Zip codes" />
+            </label>
+            <label>
+              Estimated monthly calls
+              <select required name="calls">
+                <option value="" selected disabled>Select one</option>
+                <option>Under 50</option>
+                <option>50–100</option>
+                <option>100–200</option>
+                <option>200+</option>
+              </select>
+            </label>
+            <label>
+              Priority services
+              <textarea name="services" rows="4" placeholder="Emergency towing, accident recovery, heavy duty, etc."></textarea>
+            </label>
+
+            <button class="btn btn-primary w-full" type="submit">Submit Request</button>
+            <p class="fineprint" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+
+          <p class="fineprint">
+            Tip: If you use Calendly, replace this form with your embed and keep the rest of the page.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section section-alt">
+      <div class="container narrow">
+        <h2>FAQ</h2>
+
+        <details class="faq">
+          <summary>How fast do results show up?</summary>
+          <p class="muted">Most campaigns require 30–60 days to optimize. Early traction can appear sooner depending on market demand and budget.</p>
+        </details>
+
+        <details class="faq">
+          <summary>Do you guarantee call volume?</summary>
+          <p class="muted">We don’t guarantee exact numbers because performance depends on competition, demand, and budget. We track every call and optimize continuously.</p>
+        </details>
+
+        <details class="faq">
+          <summary>Who runs the ads?</summary>
+          <p class="muted">We have a specialized campaign team that handles technical execution (targeting, optimization, tracking). iRelateDigital provides growth oversight and strategy.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <p class="fineprint">© <span id="year"></span> iRelateDigital.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
